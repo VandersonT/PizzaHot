@@ -1,0 +1,108 @@
+/*----------------------SECTION-1------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #a41f1f;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+}
+
+#logo{
+    width: 200px;
+    height: 100%;
+    background-image: url('../images/logo.png');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.menu{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul a{
+    font: 500 16px/22px "Oswald", Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-right: 10px;
+    color: white;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+}
+
+.menu ul a:hover,
+.selected{
+    border-bottom: 3px solid rgb(255, 230, 0) !important;
+}
+
+.kart{
+    margin-left: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+
+.kart:hover{
+    transform: scaleX(-1);
+}
+
+.notification{
+    background-color: rgb(255, 153, 0);
+    border-radius: 40px;
+    position: relative;
+    bottom: 10px;
+    padding: 0 5px;
+}
+.banner{
+    width: 100%;
+    height: 950px;
+    background-color: aqua;
+    background-image: url('../images/imageMain.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    margin-top: 80px;
+}
+/*-------------------------------------------------*/
+
+/*----------------------SECTION-2------------------*/
+.boxMenu{
+    width: 100%;
+    display: flex;
+    background-color: rgb(179, 179, 179);
+}
+
+.options{
+    width: 250px;
+    background-color: rgb(255, 187, 0);
+}
+.optionSingle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(202, 148, 0);
+}
+
+.optionSingle img{
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+
+.optionSingle h3{
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+/*-------------------------------------------------*/

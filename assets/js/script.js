@@ -38,6 +38,7 @@ function map(){
             insertPasteis();
             break;
     }
+    animationItens();
 
 }
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -52,7 +53,7 @@ function insertPizzas(){
         pizzaItem.querySelector('img').src = item.img;
         pizzaItem.querySelector('h1').innerHTML = item.name;
         pizzaItem.querySelector('p').innerHTML = 'R$ '+item.price.toFixed(2);
-    
+        
         document.querySelector('.items').append(pizzaItem);
     });
 }

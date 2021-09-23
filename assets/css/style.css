@@ -1,3 +1,8 @@
+
+.animate__animated.animate__fadeInUp{
+    --animate-duration: 0.5s;
+}
+
 /*----------------------SECTION-1------------------*/
 header{
     position: fixed;
@@ -55,6 +60,18 @@ header{
 }
 
 .kart:hover{
+    transform: scaleX(-1);
+}
+
+.favorite{
+    margin-left: 5px;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+
+.favorite:hover{
     transform: scaleX(-1);
 }
 
@@ -140,6 +157,27 @@ header{
     font-size: 23px;
     color: rgb(107, 0, 0);
     font-weight: bold;
+}
+.boxAction{
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    justify-content:center;
+}
+
+.boxAction p{
+    background-color: #a41f1f;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.boxAction p:hover{
+    background-color: rgb(255, 217, 0);
+    color: rgb(0, 0, 0);
 }
 /*-------------------------------------------------*/
 

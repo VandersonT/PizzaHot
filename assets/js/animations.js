@@ -10,3 +10,16 @@ for(let i = 0; i < options.length; i++){
     })
 }
 /***/
+
+animationItens();
+function animationItens(){
+    let ItemSingle = document.querySelectorAll('.ItemSingle');
+    for(let i = 0; i < ItemSingle.length; i++){
+        ItemSingle[i].addEventListener('mousemove', function(){
+            ItemSingle[i].querySelector('.boxAction').style.display = 'flex';
+        })
+        ItemSingle[i].addEventListener('mouseout', function(){
+            ItemSingle[i].querySelector('.boxAction').style.display = 'none';
+        })
+    }
+}

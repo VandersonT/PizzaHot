@@ -92,8 +92,9 @@ header{
 .optionSingle{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 70px 0;
+    height: 270px;
     cursor: pointer;
     border-bottom: 1px solid rgb(202, 148, 0);
 }
@@ -141,3 +142,52 @@ header{
     font-weight: bold;
 }
 /*-------------------------------------------------*/
+
+.box-discount{
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/discount.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.discount{
+    width: max-content;
+    position: relative;
+    top: 220px;
+    left: 60%;
+    text-align: center;
+}
+
+.discount h1{
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: rgb(255, 217, 0);
+    font-size: 50px;
+}
+
+.discount p{
+    color: white;
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.discount a{
+    background-color: #a41f1f;
+    padding: 10px 20px;
+    border-radius: 40px;
+    transition: 0.5s;
+    color: white;
+    font-size: 18px;
+}
+
+.discount a i{
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.discount a:hover{
+    background-color: rgb(255, 217, 0);
+    color: rgb(0, 0, 0);
+}

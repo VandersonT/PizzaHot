@@ -83,7 +83,6 @@ header{
 .boxMenu{
     width: 100%;
     display: flex;
-    background-color: rgb(179, 179, 179);
 }
 
 .options{

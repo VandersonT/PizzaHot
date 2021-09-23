@@ -1,7 +1,13 @@
+/*--------------------------------------------Each amount of option------------------------------------------------*/
+let amount = document.querySelectorAll('.optionSingle p');
+amount[0].innerHTML = pizzaJson.length+' opções';
+amount[1].innerHTML = drinkJson.length+' opções';
+amount[2].innerHTML = candyJson.length+' opções';
+amount[3].innerHTML = pastelJson.length+' opções';
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------map-----------------------------------------------------------*/
 let optionSelected = 'pizza';
-
-
-
 let optionSingle = document.querySelectorAll('.optionSingle');
 
 for(let i = 0; i < optionSingle.length; i++){
@@ -34,7 +40,11 @@ function map(){
     }
 
 }
+/*-----------------------------------------------------------------------------------------------------------------*/
 
+
+
+/*------------------------------------------------FUNCTIONS--------------------------------------------------------*/
 function insertPizzas(){
     pizzaJson.map((item, index)=>{
         let pizzaItem = document.querySelector('.models .ItemSingle').cloneNode(true);
@@ -80,5 +90,7 @@ function insertPasteis(){
         pizzaItem.querySelector('p').innerHTML = 'R$ '+item.price.toFixed(2);
     
         document.querySelector('.items').append(pizzaItem);
+        document.querySelector('.items').style.display = 'flex';
     });
 }
+/*-----------------------------------------------------------------------------------------------------------------*/

@@ -10,6 +10,7 @@ getOptionSelected();
 map();
 animationOptions();
 menuEachItem();
+closeWarning();
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
@@ -151,17 +152,27 @@ function kartAction(){
 
     for(let i = 0; i < btnKart.length; i++){
         btnKart[i].addEventListener('click', function(){
-            console.log(btnKart[i].closest('.boxAction').getAttribute('id'));
+            let idItemChoosen = btnKart[i].closest('.boxAction').getAttribute('id');
+
+            sessionStorage.setItem('optionSelected', optionSelected);
+            sessionStorage.setItem('idItemSelected', idItemChoosen);
+
+            window.location.assign("http://localhost/PizzaHot/favorite.html");
         })
     }
 }
 
 function favoriteAction(){
     let btnFavorite = document.querySelectorAll('.btnFavorite');
+    let warning = document.querySelector('.favoriteAdded');
 
     for(let i = 0; i < btnFavorite.length; i++){
         btnFavorite[i].addEventListener('click', function(){
-            console.log(btnFavorite[i].closest('.boxAction').getAttribute('id'));
+            let itemName = btnFavorite[i].closest('.ItemSingle').querySelector('h1').innerText;
+
+            warning.querySelector('p').innerHTML = 'Você adicionou o item "'+itemName+'" aos seus favoritos.';
+            warning.style.display = 'block';
+
         })
     }
 }
@@ -172,7 +183,18 @@ function seeMoreAction(){
     for(let i = 0; i < btnSeeMore.length; i++){
         btnSeeMore[i].addEventListener('click', function(){
             console.log(btnSeeMore[i].closest('.boxAction').getAttribute('id'));
+            alert("entao vamos ver mais");
         })
     }
+}
+
+function closeWarning(){
+    let btnCloseWarning = document.querySelector('.closeWarning');
+    let warning = document.querySelector('.favoriteAdded');
+
+    btnCloseWarning.addEventListener('click', function(){
+        warning.style.display = 'none';
+    })
+
 }
 /*-----------------------------------------------------------------------------------------------------------------*/

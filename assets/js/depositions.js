@@ -27,7 +27,7 @@ function createControlls(amount){
 }
 
 function slideStart(startIn){
-    /*Start*/
+    /*inicial*/
     let balls = document.querySelectorAll('.controls span');
     let depositions = document.querySelectorAll('.depositionSingle');
     startIn = startIn -1;
@@ -36,8 +36,7 @@ function slideStart(startIn){
     depositions[startIn].style.display = 'flex';
 
     /*Loop*/
-
-    setInterval(function(){
+    let teste = setInterval(function(){
         for(let i = 0; i < amount; i++){
             if(balls[i].classList.contains('controlsSelected')){
                 balls[i].classList.remove('controlsSelected')
@@ -57,6 +56,19 @@ function slideStart(startIn){
 
     }, waitingTime)
 
+    for(let i = 0; i < amount; i++){
+        balls[i].addEventListener('click', function(e){
+            clearInterval(teste);
+            for(let i = 0; i < amount; i++){
+                if(balls[i].classList.contains('controlsSelected')){
+                    balls[i].classList.remove('controlsSelected')
+                    depositions[i].style.display = 'none';
+                }
+            }
+            slideStart(i+1);
+        })
+    }
 
 }
+
 /*-----------------------------------------------------------------------------------------------------------------*/

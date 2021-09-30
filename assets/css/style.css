@@ -317,11 +317,11 @@ header{
 /*-------------------------------------------------*/
 
 /*----------------------SECTION-5------------------*/
-.boxNews{
+.comingSoon{
     width: 100%;
 }
 
-.boxNews__title{
+.comingSoon__title{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -329,7 +329,7 @@ header{
     text-transform: uppercase;
 }
 
-.boxNews__title h1{
+.comingSoon__title h1{
     color: rgb(56, 56, 56);
     max-width: max-content;
     font-weight: lighter;
@@ -337,11 +337,11 @@ header{
     margin-bottom: 20px;
 }
 
-.boxNews__title h1 i{
+.comingSoon__title h1 i{
     margin-right: 5px;
 }
 
-.news{
+.comingSoon{
     width: 90%;
     display: flex;
     justify-content: space-around;
@@ -349,24 +349,24 @@ header{
     margin: 0 auto;
 }
 
-.newsSingle{
+.comingSoonSingle{
     width: calc(90% / 3);
     height: 400px;
     margin: 10px;
 }
 
-.newsSingle img{
+.comingSoonSingle img{
     width: 100%;
 }
 
-.newsSingle h1{
+.comingSoonSingle h1{
     font-size: 20px;
     font-weight: lighter;
     text-transform: uppercase;
     margin: 10px 0 10px 0;
 }
 
-.newsSingle p{
+.comingSoonSingle p{
     color: rgb(95, 95, 95);
 }
 /*-------------------------------------------------*/
@@ -420,6 +420,11 @@ header{
     --animate-duration: 1.5s;
 }
 
+.empty{
+    color: rgb(199, 199, 199);
+    font-weight: lighter;
+}
+
 .controls{
     width: 800px;
     padding: 10px;
@@ -442,4 +447,60 @@ header{
 .controlsSelected{
     background-color: rgb(255, 174, 0)!important;
 }
+/*-------------------------------------------------*/
+
+/*----------------------SECTION-7------------------*/
+.news{
+    width: 100%;
+}
+
+.news__title{
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.news__title h1{
+    color: rgb(56, 56, 56);
+    max-width: max-content;
+    font-weight: lighter;
+    border-bottom: 2px solid rgb(255, 174, 0);
+    margin-bottom: 20px;
+}
+
+.news__title h1 i{
+    margin-right: 5px;
+}
+
+.boxNews{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.newsSingle{
+    width: calc(90% / 4);
+    margin: 10px;
+    text-align: center;
+}
+
+.newsSingle img{
+    width: 70px;
+    height: 70px;
+}
+
+.newsSingle h1{
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.newsSingle p{
+    text-align: justify;
+}
+
 /*-------------------------------------------------*/

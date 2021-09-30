@@ -5,20 +5,19 @@ let waitingTime = 6000; //use milliseconds here
 
 
 
-
 let amount = document.querySelectorAll('.boxDepositions  .depositionSingle').length;
-if(amount > 1){
 
+if(amount > 1){
     createControlls(amount);
     slideStart(startIn);
-
 }else{
-
-    box.innerHTML = "<h1>Não temos nenhum depoimento disponivel no momento!</h1>";
-
+    let box = document.querySelector('.boxDepositions');
+    box.innerHTML = "<h1 class='empty'>Não temos nenhum depoimento disponivel no momento!</h1>";
 }
 
-/*--------------------------------------------Functions-Helpers----------------------------------------------------*/
+
+
+/*------------------------------------------------Functions---------------------------------------------------------*/
 function createControlls(amount){
     for(let i = 0; i < amount; i++){
         let teste = document.createElement("span");
@@ -36,7 +35,7 @@ function slideStart(startIn){
     depositions[startIn].style.display = 'flex';
 
     /*Loop*/
-    let teste = setInterval(function(){
+    let depositionsLoop = setInterval(function(){
         for(let i = 0; i < amount; i++){
             if(balls[i].classList.contains('controlsSelected')){
                 balls[i].classList.remove('controlsSelected')
@@ -58,7 +57,7 @@ function slideStart(startIn){
 
     for(let i = 0; i < amount; i++){
         balls[i].addEventListener('click', function(e){
-            clearInterval(teste);
+            clearInterval(depositionsLoop);
             for(let i = 0; i < amount; i++){
                 if(balls[i].classList.contains('controlsSelected')){
                     balls[i].classList.remove('controlsSelected')

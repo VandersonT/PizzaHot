@@ -27,7 +27,6 @@
                     <li class="kart"><i class="fas fa-shopping-cart"></i></li>
                     <p class="notification">1</p>
                     <li onClick="alert('Este projeto é apenas um modelo, por isso a página de favoritos está indisponivel!')" class="favorite"><i class="far fa-heart"></i></li>
-                    <p class="notification">10</p>
                 </ul>
             </nav>
         </header>
@@ -196,15 +195,32 @@
 
     <section class="receiveNews">
         <i class="fas fa-envelope-open-text"></i>
-        <h1>Se inscreva e receba novidades</h1>
-        <p>Digite seu email abaixo se deseja receber receber novidades sobre nossas ofertas por email</p>
+        <h1>Inscreva-se e receba novidades</h1>
+        <p>Digite seu email abaixo se deseja receber novidades sobre nossas ofertas.</p>
         <form methd="POST">
-            <input type="email" name="email" placeholder="Seu endereço de email" autocomplete="off"/>
+            <input required type="email" name="email" placeholder="Seu endereço de email" autocomplete="off"/>
             <button>Enviar</button>
         </form>
     </section>
 
-    teste
+    <footer>
+        <h1 class="footer__title">Informações</h1>
+        <div class="boxInfo">
+            <div class="infoContact">
+                <p><i class="fas fa-compass"></i>PizzariaHot, Ave Nº, 9999, Nome da Cidade Aqui</p>
+                <p><i class="fas fa-envelope"></i>info@example.com</p>
+                <p><i class="fas fa-phone-alt"></i>+99 (99) 99999-9999</p>
+            </div>
+            <div class="infoOperation">
+                <h1>Funcionamento</h1>
+                <p>Segunda à sexta</p>
+                <p>16:00 - 01:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            PizzaHot © 2021 - criado por Vanderson T. Paulo.
+        </div>
+    </footer>
 
     <script src="assets/js/apiSimulation.js"></script>
     <script src="assets/js/map.js"></script>

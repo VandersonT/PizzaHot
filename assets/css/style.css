@@ -280,3 +280,89 @@ header{
     color: rgb(0, 0, 0);
 }
 /*-------------------------------------------------*/
+
+/*----------------------SECTION-4------------------*/
+.aboutUs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 50px;
+}
+
+.aboutUs__comment{
+    margin-right: 50px;
+    width: 400px;
+}
+
+.aboutUs__comment h1{
+    color: rgb(255, 174, 0);
+    font-family: 'Kaushan Script', cursive;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutUs__comment p{
+    color: rgb(112, 112, 112);
+    text-align: center;
+}
+
+.aboutUs__image{
+    width: 400px;
+    height: 400px;
+}
+/*-------------------------------------------------*/
+
+/*----------------------SECTION-5------------------*/
+.boxNews{
+    width: 100%;
+    height: 500px;
+}
+
+.boxNews__title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.boxNews__title h1{
+    color: rgb(56, 56, 56);
+    max-width: max-content;
+    font-weight: lighter;
+    border-bottom: 2px solid rgb(255, 174, 0);
+    margin-bottom: 20px;
+}
+
+.news{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.newsSingle{
+    width: 380px;
+    height: 400px;
+    margin: 10px;
+}
+
+.newsSingle img{
+    width: 100%;
+}
+
+.newsSingle h1{
+    font-size: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+}
+.newsSingle p{
+    color: rgb(95, 95, 95);
+}
+/*-------------------------------------------------*/

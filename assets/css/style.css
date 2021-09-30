@@ -319,7 +319,6 @@ header{
 /*----------------------SECTION-5------------------*/
 .boxNews{
     width: 100%;
-    height: 500px;
 }
 
 .boxNews__title{
@@ -338,6 +337,10 @@ header{
     margin-bottom: 20px;
 }
 
+.boxNews__title h1 i{
+    margin-right: 5px;
+}
+
 .news{
     width: 90%;
     display: flex;
@@ -347,7 +350,7 @@ header{
 }
 
 .newsSingle{
-    width: 380px;
+    width: calc(90% / 3);
     height: 400px;
     margin: 10px;
 }
@@ -362,7 +365,75 @@ header{
     text-transform: uppercase;
     margin: 10px 0 10px 0;
 }
+
 .newsSingle p{
     color: rgb(95, 95, 95);
+}
+/*-------------------------------------------------*/
+
+/*----------------------SECTION-6------------------*/
+.depositions{
+    width: 100%;
+    height: 500px;
+    background-image: url('../images/parallax.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxDepositions{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    color: rgb(214, 214, 214);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.boxDepositions img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+.boxDepositions p{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.boxDepositions h1{
+    font-weight: lighter;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.controls{
+    width: 800px;
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.controls span{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(179, 179, 179);
+    margin: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.controlsSelected{
+    background-color: rgb(255, 174, 0)!important;
 }
 /*-------------------------------------------------*/

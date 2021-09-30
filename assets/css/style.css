@@ -385,9 +385,10 @@ header{
     align-items: center;
 }
 
-.boxDepositions{
+.depositionSingle{
+    display: none;
     width: 800px;
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -396,19 +397,19 @@ header{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
-.boxDepositions img{
+.depositionSingle img{
     width: 80px;
     height: 80px;
     border-radius: 50px;
 }
 
-.boxDepositions p{
+.depositionSingle p{
     margin: 30px 0;
     text-align: center;
     font-size: 15px;
 }
 
-.boxDepositions h1{
+.depositionSingle h1{
     font-weight: lighter;
     font-size: 16px;
     text-transform: uppercase;

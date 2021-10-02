@@ -168,6 +168,9 @@
     .infoContact p{
         margin-right: 40px;
     }
+    .controls{
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -354,6 +357,9 @@
     }
     .boxInfo{
         font-size: 10px;
+    }
+    .depositionSingle h1{
+        font-size: 13px;
     }
 }
 

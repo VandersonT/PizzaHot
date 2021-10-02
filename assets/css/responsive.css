@@ -171,6 +171,9 @@
     .controls{
         width: 95%;
     }
+    .boxSeeMore{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -233,6 +236,24 @@
     }
     .copyright{
         font-size: 11px;
+    }
+    .seeMore{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .seeMore img{
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .pizzaInfo h1{
+        font-size: 18px;
+    }
+
+    .pizzaInfo p{
+        font-size: 14px;
     }
 }
 

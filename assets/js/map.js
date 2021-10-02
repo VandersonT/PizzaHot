@@ -11,6 +11,7 @@ map();
 animationOptions();
 menuEachItem();
 closeWarning();
+closeSeeMore();
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
@@ -182,11 +183,38 @@ function favoriteAction(){
 
 function seeMoreAction(){
     let btnSeeMore = document.querySelectorAll('.btnSeeMore');
+    let boxSeeMore = document.querySelector('.boxSeeMore');
 
     for(let i = 0; i < btnSeeMore.length; i++){
         btnSeeMore[i].addEventListener('click', function(){
-            console.log(btnSeeMore[i].closest('.boxAction').getAttribute('id'));
-            alert("entao vamos ver mais");
+            let id = btnSeeMore[i].closest('.boxAction').getAttribute('id');
+            
+            switch(optionSelected){
+                case 'pizza':
+                    boxSeeMore.querySelector('.seeMore img').src = pizzaJson[id]['img'];    
+                    boxSeeMore.querySelector('.pizzaInfo > p').innerHTML = pizzaJson[id]['description'];
+                    boxSeeMore.querySelector('.pizzaInfoSingle p').innerHTML = pizzaJson[id]['name'];
+                    break;
+                case 'drink':
+                    boxSeeMore.querySelector('.seeMore img').src = drinkJson[id]['img'];    
+                    boxSeeMore.querySelector('.pizzaInfo > p').innerHTML = drinkJson[id]['description'];
+                    boxSeeMore.querySelector('.pizzaInfoSingle p').innerHTML = drinkJson[id]['name'];
+                    break;
+                case 'candy':
+                    boxSeeMore.querySelector('.seeMore img').src = candyJson[id]['img'];    
+                    boxSeeMore.querySelector('.pizzaInfo > p').innerHTML = candyJson[id]['description'];
+                    boxSeeMore.querySelector('.pizzaInfoSingle p').innerHTML = candyJson[id]['name'];
+                    break;
+                case 'pastel':
+                    boxSeeMore.querySelector('.seeMore img').src = pastelJson[id]['img'];    
+                    boxSeeMore.querySelector('.pizzaInfo > p').innerHTML = pastelJson[id]['description'];
+                    boxSeeMore.querySelector('.pizzaInfoSingle p').innerHTML = pastelJson[id]['name'];
+                    break;
+            }
+            
+
+            
+            boxSeeMore.style.display = 'block';
         })
     }
 }
@@ -198,6 +226,16 @@ function closeWarning(){
     btnCloseWarning.addEventListener('click', function(){
         warning.style.display = 'none';
     })
+}
+
+function closeSeeMore(){
+    let btnCloseSeeMore = document.querySelector('.closeSeeMore');
+    let boxSeeMore = document.querySelector('.boxSeeMore');
+
+    btnCloseSeeMore.addEventListener('click', function(){
+        boxSeeMore.style.display = 'none';
+    })
 
 }
+
 /*-----------------------------------------------------------------------------------------------------------------*/

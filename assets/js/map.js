@@ -1,5 +1,6 @@
 /*-----------------------------------------------Default-Values----------------------------------------------------*/
 let optionSelected = 'pizza';
+let yourCart = [];
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
@@ -151,17 +152,43 @@ function itemsAmount(){
     amount[3].innerHTML = pastelJson.length+' opções';
 }
 
+function verifyCartNotification(){
+    let notification = document.querySelector('.notification');
+    let qtd = 0;
+
+    if(yourCart.length > 0){
+        for(let i = 0; i < yourCart.length; i++){
+            qtd = qtd + yourCart[i]['qtd'];
+        }
+
+        notification.style.display = 'block';
+        notification.innerHTML = qtd;
+    }
+
+}
+
 function kartAction(){
     let btnKart = document.querySelectorAll('.btnKart');
 
     for(let i = 0; i < btnKart.length; i++){
         btnKart[i].addEventListener('click', function(){
             let idItemChoosen = btnKart[i].closest('.boxAction').getAttribute('id');
+            let oneMore = false;
 
-            sessionStorage.setItem('optionSelected', optionSelected);
-            sessionStorage.setItem('idItemSelected', idItemChoosen);
+            for(let i = 0; i < yourCart.length; i++){
+                if(yourCart[i]['id'] == idItemChoosen && yourCart[i]['type'] == optionSelected){
+                    yourCart[i]['qtd'] = yourCart[i]['qtd'] + 1;
+                    oneMore = true;
+                }
+            }
 
-            window.location.assign("http://localhost/PizzaHot/favorite.html");
+            if(!oneMore){
+                yourCart.push({id:idItemChoosen, type:optionSelected, qtd: 1});
+            }
+
+            verifyCartNotification();
+
+            alert("Produto adicionado ao seu carrinho.");
         })
     }
 }
@@ -211,8 +238,6 @@ function seeMoreAction(){
                     boxSeeMore.querySelector('.pizzaInfoSingle p').innerHTML = pastelJson[id]['name'];
                     break;
             }
-            
-
             
             boxSeeMore.style.display = 'block';
         })

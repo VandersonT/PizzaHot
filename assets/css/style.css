@@ -349,11 +349,12 @@ header{
 }
 
 .comingSoon{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .comingSoonSingle{
@@ -385,7 +386,6 @@ header{
     background-image: url('../images/parallax.jpg');
     background-size: cover;
     background-position: center;
-    /*background-attachment: fixed;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -396,7 +396,6 @@ header{
     display: none;
     width: 800px;
     height: 300px;
-    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -435,7 +434,6 @@ header{
 .controls{
     width: 800px;
     padding: 10px;
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -625,301 +623,3 @@ footer .footer__title{
     color: rgb(196, 196, 196);
 }
 /*-------------------------------------------------*/
-
-@media screen and (max-width: 1200px) {
-    .discount{
-        left: 50%;
-    }
-    .discount h1{
-        font-size: 40px;
-    }
-    
-    .discount p{
-        font-size: 20px;
-    }
-    
-    .discount a{
-        padding: 10px 15px;
-        font-size: 16px;
-    }
-    .discount a i{
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .menu{
-        display: none;
-    }
-    .btnMenuMobile{
-        display: block;
-    }
-    .boxAction{
-        display: flex;
-    }
-    .options{
-        width: 190px;
-    }
-    .optionSingle img{
-        width: 60px;
-        height: 70px;
-    }
-    .optionSingle h3{
-        font-size: 17px;
-    }
-    .optionSingle p{
-        font-size: 14px;
-    }
-    .items{
-        width: 100%;
-        height: auto;
-        padding: 80px 20px;
-    }
-    .ItemSingle{
-        width: 250px;
-        height: 270px;
-        margin: 10px;
-    }
-    .ItemSingle img{
-        width: 80%;
-        height: 150px;
-    }
-    .ItemSingle h1{
-        font-size: 20px;
-    }
-    .ItemSingle p{
-        font-size: 19px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .aboutUs{
-        padding: 40px 20px;
-    }
-    .aboutUs__comment{
-        margin-right: 0;
-        width: 400px;
-    }
-    
-    .aboutUs__comment h1{
-        font-size: 25px;
-    }
-
-    .aboutUs__comment p{
-        text-align: left;
-    }
-    .aboutUs__image{
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media screen and (max-width: 830px) {
-    .banner{
-        height: 500px;
-    }
-    .box-discount{
-        height: 450px;
-        background-size: 100% 100%;
-    }
-    .discount{
-        left: 55%;
-    }
-    .discount h1{
-        font-size: 30px;
-    }
-    .discount p{
-        font-size: 16px;
-    }
-    .boxMenu{
-        flex-direction: column;
-    }
-    .options{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .optionSingle{
-        width: calc(95% / 4);
-        height: 130px;
-        cursor: pointer;
-        border-right: 1px solid rgb(202, 148, 0);
-        border-bottom: 0;
-    }
-    .optionSingle:first-child{
-        border-left: 1px solid rgb(202, 148, 0);
-    }
-    .items{
-        width: 100%;
-        height: auto;
-        padding: 20px 20px;
-    }
-    .ItemSingle{
-        width: 200px;
-        height: 240px;
-        margin: 10px;
-    }
-    .ItemSingle img{
-        width: 100px;
-        height: 100px;
-    }
-    .boxAction{
-        position:initial;
-        margin-top: 10px;
-    }
-    .boxAction p{
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 630px) {
-    .banner{
-        height: 75vh;
-    }
-    .box-discount{
-        height: 400px;
-    }
-    .discount h1{
-        font-size: 20px;
-    }
-    .discount p{
-        font-size: 14px;
-    }
-
-    .aboutUs{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .aboutUs__comment{
-        margin-right: 0;
-    }
-    .aboutUs__image{
-        width: 400px;
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .banner{
-        height: 60vh;
-    }
-    .box-discount{
-        height: 300px;
-    }
-    .discount{
-        top: 35%;
-    }
-    .discount a{
-        padding: 8px 10px;
-        font-size: 12px;
-    }
-    .discount a i{
-        font-size: 11px;
-    }
-    .ItemSingle{
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-    .ItemSingle img{
-        width: 250px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    header{
-        justify-content: space-between;
-        padding: 5px 10px;
-    }
-    .btnMenuMobile{
-        margin-top: 10px;
-    }
-    .banner{
-        height: 200px;
-    }
-    .box-discount{
-        background-size: 100% 100%;
-    }
-    .box-discount{
-        height: 250px;
-    }
-    .discount{
-        top: 25%;
-        left: 25%;
-    }
-    .discount a{
-        padding: 8px 10px;
-        font-size: 12px;
-    }
-    .discount a i{
-        font-size: 11px;
-    }
-    .optionSingle img{
-        width: 40px;
-        height: 40px;
-    }
-    .optionSingle{
-        height: 90px;
-    }
-    .optionSingle h3{
-        font-size: 13px;
-    }
-    .optionSingle p{
-        font-size: 12px;
-    }
-    
-    .aboutUs__comment{
-        width: 100%;
-    }
-    
-    .aboutUs__comment h1{
-        font-size: 20px;
-    }
-    
-    .aboutUs__comment p{
-        font-size: 17px;
-        text-align: justify;
-        margin-bottom: 10px;
-    }
-    
-    .aboutUs__image{
-        width: 90%;
-        height: 90vw;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .banner{
-        height: 170px;
-    }
-    .optionSingle img{
-        width: 30px;
-        height: 30px;
-    }
-    .optionSingle h3{
-        font-size: 11px;
-    }
-    .optionSingle p{
-        font-size: 10px;
-    }
-    .ItemSingle{
-        width: 100%;
-    }
-    .ItemSingle img{
-        width: 100%;
-        height: 170px;
-    }
-    .aboutUs__comment p{
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-heigth: 520px) {
-    .banner{
-        width: 100%;
-        height: 600px;
-        background-size: 100% 100%;
-    }
-}

@@ -44,6 +44,7 @@ function map(){
     kartAction();
     favoriteAction();
     seeMoreAction();
+    mapKart();
 }
 /*-----------------------------------------------------------------------------------------------------------------*/
 
@@ -167,11 +168,37 @@ function verifyCartNotification(){
 
 }
 
+function mapKart(){
+
+    if(yourCart.length == 0){
+        document.querySelector('.ItemsToBuy').innerHTML = '<p style="text-align: center; font-size: 20px; margin-top: 30px; color: #1f1f1f;">Você não adicionou nenhum item ao carrinho</p>';
+        return false;
+    }
+    document.querySelector('.ItemsToBuy').innerHTML = '';
+
+    yourCart.map((item, index)=>{
+        console.log(yourCart);
+        let itemSingle = document.querySelector('.modelKartSingle .itemSingleKart').cloneNode(true);
+    
+        itemSingle.querySelector('img').src = item['img'];
+        itemSingle.querySelector('.nameItemToBuy').innerHTML = item.name;
+        itemSingle.querySelector('.showAmount').innerHTML = item.qtd;
+
+        document.querySelector('.ItemsToBuy').append(itemSingle);
+    });
+
+}
+
 function kartAction(){
     let btnKart = document.querySelectorAll('.btnKart');
 
     for(let i = 0; i < btnKart.length; i++){
         btnKart[i].addEventListener('click', function(){
+            
+            if(!confirm("Você quer adicionar este produto ao seu carrinho?")){
+                return false.valueOf;
+            }
+            
             let idItemChoosen = btnKart[i].closest('.boxAction').getAttribute('id');
             let oneMore = false;
 
@@ -183,12 +210,24 @@ function kartAction(){
             }
 
             if(!oneMore){
-                yourCart.push({id:idItemChoosen, type:optionSelected, qtd: 1});
+                switch(optionSelected){
+                    case 'pizza':
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pizzaJson[idItemChoosen]['name'], qtd: 1, img: pizzaJson[idItemChoosen]['img']});
+                        break;
+                    case 'drink':
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: drinkJson[idItemChoosen]['name'], qtd: 1, img: drinkJson[idItemChoosen]['img']});
+                        break;
+                    case 'candy':
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: candyJson[idItemChoosen]['name'], qtd: 1, img: candyJson[idItemChoosen]['img']});
+                        break;
+                    case 'pastel':
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pastelJson[idItemChoosen]['name'], qtd: 1, img: pastelJson[idItemChoosen]['img']});
+                        break;
+                }
             }
 
             verifyCartNotification();
-
-            alert("Produto adicionado ao seu carrinho.");
+            mapKart();
         })
     }
 }
@@ -259,6 +298,30 @@ function closeSeeMore(){
 
     btnCloseSeeMore.addEventListener('click', function(){
         boxSeeMore.style.display = 'none';
+    })
+
+}
+
+openKart();
+function openKart(){
+    let closeCart = document.querySelector('.closeCart');
+    let kart = document.querySelector('.yourCart');
+    let btnOpen = document.querySelector('.kart');
+
+    btnOpen.addEventListener('click', function(){
+        kart.style.display = 'block';
+        closeCart.style.display = 'block';
+    })
+}
+
+closeKart();
+function closeKart(){
+    let closeCart = document.querySelector('.closeCart');
+    let kart = document.querySelector('.yourCart');
+
+    closeCart.addEventListener('click', function(){
+        kart.style.display = 'none';
+        closeCart.style.display = 'none';
     })
 
 }

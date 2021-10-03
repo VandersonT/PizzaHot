@@ -192,6 +192,7 @@ function mapKart(){
 
 function calcPrice(){
     let total = 0;
+    let discount = 0;
     for(let j = 0; j < yourCart.length; j++){
         if(yourCart[j]['qtd'] > 1){
             for(let q = 0; q < yourCart[j]['qtd']; q++){
@@ -201,12 +202,16 @@ function calcPrice(){
             total += yourCart[j]['price'];
         }
     }
-    document.querySelector('.price span').innerHTML = total.toFixed(2);
 
     if(total > 30){
-        document.querySelector('.subprice span').innerHTML = ((total*30)/100).toFixed(2);
+        discount = ((total*30)/100).toFixed(2);
+        total = total.toFixed(2) - discount;
+        document.querySelector('.subprice span').innerHTML = discount;
+        document.querySelector('.price span').innerHTML = total.toFixed(2);
+        console.log(total.toFixed(2));
     }else{
         document.querySelector('.subprice span').innerHTML = 0;
+        document.querySelector('.price span').innerHTML = total;
     }
 
 }

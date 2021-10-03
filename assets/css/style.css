@@ -1,3 +1,13 @@
+.goTop{
+    /*display: none;*/
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 40px;
+    color: #a41f1f;
+    cursor: pointer;
+    z-index: 5;
+}
 
 .animate__animated.animate__fadeInUp{
     --animate-duration: 0.5s;

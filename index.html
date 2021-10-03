@@ -16,15 +16,20 @@
 </head>
 <body>
 
+    <div class="goTop animate__animated animate__jackInTheBox">
+        <i class="fas fa-caret-square-up"></i>
+    </div>
+
     <section id="initial">
         <header>
             <div id="logo"></div>
             <nav class="menu">
                 <ul>
-                    <a href="#initial" class="selected"><li>Inicio</li></a>
+                    <a href="#initial"><li>Inicio</li></a>
                     <a href="#boxMenu"><li>Cardápio</li></a>
-                    <a href=""><li>Depoimentos</li></a>
-                    <a href=""><li>Contato</li></a>
+                    <a href="#aboutUs"><li>Sobre Nós</li></a>
+                    <a href="#depositions"><li>Depoimentos</li></a>
+                    <a href="#footer"><li>Contato</li></a>
                     <li class="kart"><i class="fas fa-shopping-cart"></i></li>
                     <p class="notification">1</p>
 
@@ -69,7 +74,7 @@
         </header>
         <div class="banner"></div>
     </section>
-    <section id="boxMdenu" class="boxMenu">
+    <section id="boxMenu" class="boxMenu">
         <div class="options">
             <div class="optionSingle pizzas" value="pizza">
                 <img src="assets/images/iconPizza.png" />
@@ -139,7 +144,7 @@
         </div>
     </section>
 
-    <section class="aboutUs">
+    <section id="aboutUs" class="aboutUs">
         <div class="aboutUs__comment">
             <h1>Sobre Nós</h1>
             <p>
@@ -182,7 +187,7 @@
         </div>
     </section>
 
-    <section class="depositions">
+    <section id="depositions" class="depositions">
         <div class="boxDepositions">
             <div class="depositionSingle animate__animated animate__zoomIn">
                 <img src="assets/images/rosa.jpg" />
@@ -254,7 +259,7 @@
         </form>
     </section>
 
-    <footer>
+    <footer id="footer">
         <h1 class="footer__title">Informações</h1>
         <div class="boxInfo">
             <div class="infoContact">
@@ -276,5 +281,6 @@
     <script src="assets/js/apiSimulation.js"></script>
     <script src="assets/js/map.js"></script>
     <script src="assets/js/depositions.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

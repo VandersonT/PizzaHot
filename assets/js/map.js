@@ -334,11 +334,17 @@ function openKart(){
     let closeCart = document.querySelector('.closeCart');
     let kart = document.querySelector('.yourCart');
     let btnOpen = document.querySelector('.kart');
+    let btnOpenMobile = document.querySelector('.kartMobile');
 
     btnOpen.addEventListener('click', function(){
         kart.style.display = 'block';
         closeCart.style.display = 'block';
-    })
+    });
+
+    btnOpenMobile.addEventListener('click', function(){
+        kart.style.display = 'block';
+        closeCart.style.display = 'block';
+    });
 }
 
 closeKart();

@@ -258,6 +258,9 @@
 }
 
 @media screen and (max-width: 520px) {
+    .menuMobile li{
+        font-size: 15px;
+     }
     .yourCart{
         width: 90%;
     }

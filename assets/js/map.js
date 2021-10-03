@@ -171,13 +171,12 @@ function verifyCartNotification(){
 function mapKart(){
 
     if(yourCart.length == 0){
-        document.querySelector('.ItemsToBuy').innerHTML = '<p style="text-align: center; font-size: 20px; margin-top: 30px; color: #1f1f1f;">Você não adicionou nenhum item ao carrinho</p>';
+        document.querySelector('.ItemsToBuy').innerHTML = '<p style="text-align: center; font-size: 20px; margin-top: 30px; color: #1f1f1f;">Você não adicionou nada ao carrinho.</p>';
         return false;
     }
     document.querySelector('.ItemsToBuy').innerHTML = '';
 
     yourCart.map((item, index)=>{
-        console.log(yourCart);
         let itemSingle = document.querySelector('.modelKartSingle .itemSingleKart').cloneNode(true);
     
         itemSingle.querySelector('img').src = item['img'];
@@ -186,6 +185,29 @@ function mapKart(){
 
         document.querySelector('.ItemsToBuy').append(itemSingle);
     });
+
+    calcPrice();
+    kartMoreAndLessItems();
+}
+
+function calcPrice(){
+    let total = 0;
+    for(let j = 0; j < yourCart.length; j++){
+        if(yourCart[j]['qtd'] > 1){
+            for(let q = 0; q < yourCart[j]['qtd']; q++){
+                total += yourCart[j]['price'];
+            }
+        }else{
+            total += yourCart[j]['price'];
+        }
+    }
+    document.querySelector('.price span').innerHTML = total.toFixed(2);
+
+    if(total > 30){
+        document.querySelector('.subprice span').innerHTML = ((total*30)/100).toFixed(2);
+    }else{
+        document.querySelector('.subprice span').innerHTML = 0;
+    }
 
 }
 
@@ -212,20 +234,20 @@ function kartAction(){
             if(!oneMore){
                 switch(optionSelected){
                     case 'pizza':
-                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pizzaJson[idItemChoosen]['name'], qtd: 1, img: pizzaJson[idItemChoosen]['img']});
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pizzaJson[idItemChoosen]['name'], qtd: 1, img: pizzaJson[idItemChoosen]['img'], price:pizzaJson[idItemChoosen]['price']});
                         break;
                     case 'drink':
-                        yourCart.push({id:idItemChoosen, type:optionSelected, name: drinkJson[idItemChoosen]['name'], qtd: 1, img: drinkJson[idItemChoosen]['img']});
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: drinkJson[idItemChoosen]['name'], qtd: 1, img: drinkJson[idItemChoosen]['img'], price:pizzaJson[idItemChoosen]['price']});
                         break;
                     case 'candy':
-                        yourCart.push({id:idItemChoosen, type:optionSelected, name: candyJson[idItemChoosen]['name'], qtd: 1, img: candyJson[idItemChoosen]['img']});
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: candyJson[idItemChoosen]['name'], qtd: 1, img: candyJson[idItemChoosen]['img'], price:pizzaJson[idItemChoosen]['price']});
                         break;
                     case 'pastel':
-                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pastelJson[idItemChoosen]['name'], qtd: 1, img: pastelJson[idItemChoosen]['img']});
+                        yourCart.push({id:idItemChoosen, type:optionSelected, name: pastelJson[idItemChoosen]['name'], qtd: 1, img: pastelJson[idItemChoosen]['img'], price:pizzaJson[idItemChoosen]['price']});
                         break;
                 }
             }
-
+            document.querySelector('.kart').click();
             verifyCartNotification();
             mapKart();
         })
@@ -326,4 +348,39 @@ function closeKart(){
 
 }
 
+function kartMoreAndLessItems(){
+    let itemMore = document.querySelectorAll('.itemMore');
+    let itemLess = document.querySelectorAll('.itemLess');
+    
+    for(let i = 0; i < itemMore.length; i++){
+        let showAmount = document.querySelectorAll('.showAmount')[i];
+        
+        itemMore[i].addEventListener('click', function(){
+            let currentQtd = parseInt(showAmount.innerText);
+            showAmount.innerHTML = currentQtd + 1;
+            yourCart[i-1]['qtd'] = yourCart[i-1]['qtd'] + 1;
+            calcPrice();
+            verifyCartNotification();
+        })
+
+
+        itemLess[i].addEventListener('click', function(){
+            let currentQtd = parseInt(showAmount.innerText);
+            if(currentQtd == 1){
+                yourCart.splice(i-1, 1);
+                verifyCartNotification();
+                mapKart();
+                calcPrice();
+                verifyCartNotification();
+                return false;
+            }
+            yourCart[i-1]['qtd'] = yourCart[i-1]['qtd'] - 1;
+            calcPrice();
+            showAmount.innerHTML = currentQtd - 1;
+            verifyCartNotification();
+        })
+
+    }
+
+}
 /*-----------------------------------------------------------------------------------------------------------------*/

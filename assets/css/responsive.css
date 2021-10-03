@@ -258,6 +258,25 @@
 }
 
 @media screen and (max-width: 520px) {
+    .yourCart{
+        width: 90%;
+    }
+    .yourCart h1{
+        font-size: 22px;
+    }
+    .yourCart h1 i{
+        font-size: 20px;
+    }
+    .kartEmpty{
+        font-size: 16px;
+    }
+    .subprice,
+    .price{
+        font-size: 16px;
+    }
+    .closeCart{
+        right: 90%;
+    }
     .banner{
         height: 60vh;
     }

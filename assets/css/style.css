@@ -1,5 +1,5 @@
 .goTop{
-    /*display: none;*/
+    display: none;
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -107,7 +107,7 @@ header{
 }
 
 .yourCart{
-    display: none;
+    /*display: none;*/
     width: 400px;
     height: 90vh;
     position: fixed;
@@ -138,6 +138,12 @@ header{
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
+}
+.kartEmpty{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #1f1f1f;
 }
 
 .itemSingleKart{
@@ -200,7 +206,7 @@ header{
 }
 
 .closeCart{
-    display: none;
+    /*display: none;*/
     position: fixed;
     top: 50%;
     right: 400px;

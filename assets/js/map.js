@@ -171,7 +171,7 @@ function verifyCartNotification(){
 function mapKart(){
 
     if(yourCart.length == 0){
-        document.querySelector('.ItemsToBuy').innerHTML = '<p style="text-align: center; font-size: 20px; margin-top: 30px; color: #1f1f1f;">Você não adicionou nada ao carrinho.</p>';
+        document.querySelector('.ItemsToBuy').innerHTML = '<p class="kartEmpty">Você não adicionou nada ao carrinho.</p>';
         return false;
     }
     document.querySelector('.ItemsToBuy').innerHTML = '';

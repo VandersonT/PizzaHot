@@ -252,7 +252,7 @@ header{
 .banner{
     width: 100%;
     height: calc(100vh + 100px);
-    background-image: url('../images/imageMain.jpg');
+    background-image: url('../images/imageMain.webp');
     background-position: center;
     background-size: 100% 100%;
     margin-top: 80px;
@@ -473,7 +473,7 @@ header{
 .box-discount{
     width: 100%;
     height: 600px;
-    background-image: url('../images/discount.jpg');
+    background-image: url('../images/discount.webp');
     background-position: center;
     background-size: cover;
 }
@@ -615,7 +615,7 @@ header{
 .depositions{
     width: 100%;
     height: 500px;
-    background-image: url('../images/parallax.jpg');
+    background-image: url('../images/parallax.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -798,7 +798,7 @@ header{
 footer{
     width: 100%;
     height: 320px;
-    background-image: url('../images/parallax.jpg');
+    background-image: url('../images/parallax.webp');
     background-size: cover;
     background-position: center;
     text-align: center;
